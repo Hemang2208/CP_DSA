@@ -1,0 +1,18 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run CodeForces solution",
+      "type": "shell",
+      "command": "node \"${file}\" < \"${workspaceFolder}/Input.txt\" > \"${workspaceFolder}/Output.txt\"",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}

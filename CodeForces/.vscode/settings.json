@@ -1,0 +1,5 @@
+{
+  "code-runner.executorMap": {
+    "javascript": "node \"$fullFileName\" < \"$dir/Input.txt\" > \"$dir/Output.txt\""
+  }
+}
