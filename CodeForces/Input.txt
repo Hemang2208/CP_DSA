@@ -1,1 +1,1 @@
-node "112A-Petya-and-Strings.js" < "Input.txt" > "Output.txt"
+node "test.js" < "Input.txt" > "Output.txt"
