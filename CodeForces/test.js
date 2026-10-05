@@ -1,1 +1,1 @@
-node "test.js" < "Input.txt" > "Output.txt"
+// node "test.js" < "Input.txt" > "Output.txt"
