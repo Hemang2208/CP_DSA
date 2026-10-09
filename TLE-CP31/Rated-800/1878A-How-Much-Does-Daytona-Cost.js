@@ -1,4 +1,4 @@
-// https://codeforces.com/problemset/problem/1877/A DONE
+// https://codeforces.com/problemset/problem/1878/A
 
 const fs = require("fs");
 
@@ -10,29 +10,32 @@ const outcomes = [];
 
 function inputArray(n) {
 	let arr = []
-	for(let i = 0; i < n-1 ; i++) {
+	for(let i = 0; i < n ; i++) {
 		const a = Number(input[index++]);
 		arr.push(a);
 	}
 	return arr;
 }
 
-function sumArray(arr, n) {
-	let sum = 0;
-	for(let i = 0 ; i < n-1 ; i++) {
-		sum = Number(sum + arr[i]);
+function checkArray(arr, n, k) {
+	for(let i = 0 ; i < n ; i++) {
+		if(arr[i] === k) {
+			outcomes.push("YES")
+			return;
+		}
 	}
-	sum = Number(sum * -1);
-	outcomes.push(sum);
+	outcomes.push("NO")
+	return;
 }
 
 for(let i = 0 ; i < t ; i++) {
 	const n = Number(input[index++]);
+	const k = Number(input[index++]);
 
 	let arr = []
 	arr = inputArray(n);
 
-	sumArray(arr, n)
+	checkArray(arr, n, k)
 }
 
 console.log(outcomes.join("\n"));
