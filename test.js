@@ -1,38 +1,24 @@
-// https://codeforces.com/problemset/problem/1877/A DONE
+// https://codeforces.com/contest/2271/problem/E
 
 const fs = require("fs");
 
 const input = fs.readFileSync(0, "utf-8").trim().split(/\s+/).map(Number);
 
 let index = 0;
-const t = Number(input[index++]);
+const t = input[index++];
 const outcomes = [];
 
-function inputArray(n) {
-	let arr = []
-	for(let i = 0; i < n-1 ; i++) {
-		const a = Number(input[index++]);
-		arr.push(a);
-	}
-	return arr;
-}
-
-function sumArray(arr, n) {
-	let sum = 0;
-	for(let i = 0 ; i < n-1 ; i++) {
-		sum = Number(sum + arr[i]);
-	}
-	sum = Number(sum * -1);
-	outcomes.push(sum);
-}
-
 for(let i = 0 ; i < t ; i++) {
-	const n = Number(input[index++]);
+	const n = input[index++];
+	const k = input[index++];
 
-	let arr = []
-	arr = inputArray(n);
+	let arr = [];
 
-	sumArray(arr, n)
+	for(let j = 0 ; j < n ; j++) {
+		arr.push(input[index++]);
+	}
+
+	outcomes.push(solve(n, k, arr));
 }
 
 console.log(outcomes.join("\n"));
