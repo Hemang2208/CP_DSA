@@ -1,1 +1,9 @@
-node "test.js" < "Input.txt" > "Output.txt"
+4
+5
+7 4 16 4 2
+4
+1 7 10 100
+3
+4 16 37
+3
+2 20 4
