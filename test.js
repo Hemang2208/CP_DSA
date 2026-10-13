@@ -1,3 +1,4 @@
+// https://codeforces.com/problemset/problem/
 // node "test.js" < "Input.txt" > "Output.txt"
 
 const fs = require("fs");
@@ -23,7 +24,7 @@ for(let i = 0 ; i < t ; i++) {
 
 	let arr = []
 	arr = inputArray(n)
-	arr.sort()
+	arr.sort((a,b) => a - b)
 
 	outcomes.push(arr)
 }

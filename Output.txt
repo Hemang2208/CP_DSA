@@ -1,1 +1,5 @@
-// node "test.js" < "Input.txt" > "Output.txt"
+YES
+NO
+YES
+YES
+NO
