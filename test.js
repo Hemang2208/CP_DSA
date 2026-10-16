@@ -22,9 +22,9 @@ function inputArray(n) {
 for(let i = 0 ; i < t ; i++) {
 	const n = Number(input[index++]);
 
-	let arr = []
-	arr = inputArray(n)
-	arr.sort((a,b) => a - b)
+	let arr = [];
+	arr = inputArray(n);
+	arr.sort((a,b) => a - b);
 
 	outcomes.push(arr)
 }
