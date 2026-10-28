@@ -1,31 +1,40 @@
-// https://codeforces.com/problemset/problem/
+// https://codeforces.com/problemset/problem/16/A
 // node "test.js" < "Input.txt" > "Output.txt"
 
 const fs = require("fs");
 
-const input = fs.readFileSync(0, "utf-8").trim().split(/\s+/).map(Number);
+const input = fs.readFileSync(0, "utf-8").trim().split(/\s+/).map(String);
 
 let index = 0;
-const t = Number(input[index++]);
-const outcomes = [];
 
-function inputArray(n) {
-	let arr = [];
-	for (let i = 0; i < n; i++) {
-		const a = Number(input[index++]);
-		arr.push(a);
+const n = Number(input[index++]);
+const m = Number(input[index++]);
+const t = n * m;
+
+// let arr = input.slice(index, index + n).join("").split("");
+
+let arr = [];
+for (let i = 0; i < n; i++) {
+	let a = input[index++];
+	if(a[0] != a[1] || a[1] != a[2] || a[0] != a[2]) {
+		console.log("NO")
+		return;	
 	}
-
-	return arr;
+	a = a.toString().split("");
+	arr.push(...a);
 }
+
+const track = new Map();
 
 for(let i = 0 ; i < t ; i++) {
-	const n = Number(input[index++]);
+	track.set(arr[i], (track.get(arr[i]) || 0) + 1);
 
-	let arr = inputArray(n);
-	arr.sort((a,b) => a - b);
-
-	outcomes.push(arr);
+	const status = Number(track.get(arr[i])) || 0;
+	const size = Number(track.size);
+	if(status > n || size > n) {
+		console.log("NO")
+		return;
+	}
 }
 
-console.log(outcomes.join("\n"));
+console.log("YES")
