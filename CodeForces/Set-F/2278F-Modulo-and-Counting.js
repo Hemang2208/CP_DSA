@@ -1,0 +1,91 @@
+// https://codeforces.com/problemset/problem/2278/F
+// node "test.js" < "Input.txt" > "Output.txt"
+
+const fs = require("fs");
+
+const input = fs.readFileSync(0, "utf-8").trim().split(/\s+/).map(Number);
+
+let index = 0;
+const t = Number(input[index++]);
+const outcomes = [];
+
+const MOD = 998244353;
+
+for (let i = 0; i < t; i++) {
+	const n = Number(input[index++]);
+	const m = Number(input[index++]);
+
+	let dp = new Array(m + 1).fill(0);
+	dp[0] = 1;
+
+	let totalAns = 0;
+
+	for (let step = 1; step < n; step++) {
+		const nextDp = new Array(m + 1).fill(0);
+		
+		const pref = new Array(m + 2).fill(0);
+
+		for (let j = 0; j <= m; j++) {
+			pref[j + 1] = Number((pref[j] + dp[j]) % MOD);
+		}
+
+		for (let j = 0; j <= m; j++) {
+			const low = Number(Math.floor(j / 2));
+			const high = j;
+
+			if (low <= high) {
+				nextDp[j] = Number((pref[high + 1] - pref[low] + MOD) % MOD);
+			}
+		}
+
+		dp = nextDp;
+		totalAns = Number((totalAns + dp[m]) % MOD);
+	}
+
+	outcomes.push(totalAns.toString());
+}
+
+console.log(outcomes.join("\n"));
+
+// const fs = require("fs");
+
+// const input = fs.readFileSync(0, "utf-8").trim().split(/\s+/).map(Number);
+
+// let index = 0;
+// const t = Number(input[index++]);
+// const outcomes = [];
+
+// const MOD = 998244353;
+
+// for (let i = 0; i < t; i++) {
+//     const n = Number(input[index++]);
+//     const m = Number(input[index++]);
+
+//     let dp = new Array(m + 1).fill(0);
+//     dp[0] = 1;
+
+//     let totalAns = 0;
+
+//     for (let step = 1; step < n; step++) {
+//         let nextDp = new Array(m + 1).fill(0);
+
+//         for (let j = 0; j <= m; j++) {
+//             let low = Number(Math.floor(j / 2));
+//             let high = j;
+
+//             for (let k = low; k <= high; k++) {
+//                 nextDp[j] = Number(nextDp[j] + dp[k]);
+//                 nextDp[j] = Number(nextDp[j] % MOD);
+//             }
+//         }
+
+//         dp = nextDp;
+
+//         totalAns = Number(totalAns + dp[m]);
+//         totalAns = Number(totalAns % MOD);
+//     }
+
+//     outcomes.push(totalAns.toString());
+// }
+
+// console.log(outcomes.join("\n"));
