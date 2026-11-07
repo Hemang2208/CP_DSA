@@ -1,0 +1,232 @@
+FINAL COMPLETE DSA TOPIC CHECKLIST — VERY BASIC TO VERY ADVANCED
+
+=====================================================================
+LEVEL 1 — FOUNDATIONS (Very Basic)
+=====================================================================
+
+1. Programming Fundamentals
+Programming Basics, Compilation vs Interpretation, Variables, Constants, Data Types, Primitive vs Reference Types, Type Casting, Integer Overflow, Floating Point Precision, Operators, Arithmetic Operators, Relational Operators, Logical Operators, Assignment Operators, Operator Precedence, Input/Output, Fast Input/Output, Conditional Statements, if-else, Switch Case, Ternary Operator, Loops, for Loop, while Loop, do-while Loop, Break and Continue, Nested Loops, Pattern Printing, Functions, Parameters and Return Values, Call by Value, Call by Reference, Function Overloading, Scope, Variable Lifetime, Stack Memory, Heap Memory, Pointers and References, Dynamic Memory Allocation, Arrays, Strings, Structs, Classes and Objects, Basic OOP (Encapsulation, Inheritance, Polymorphism, Abstraction), Generics and Templates, Iterators, Standard Library Containers (Vector, List, Map, Set, Stack, Queue, Deque, Priority Queue), Custom Comparators, Lambda Functions, Maps, Sets, Exception Handling, File Handling, Debugging Techniques, Dry Run, Writing Test Cases, Handling Edge Cases.
+
+2. Complexity Analysis Basics
+Time Complexity, Space Complexity, Auxiliary Space, Best Case, Worst Case, Average Case, Big-O Notation, Big-Theta Notation, Big-Omega Notation, Little-o Notation, Little-omega Notation, Growth Rates of Functions, Comparing Functions, Analyzing Loops, Analyzing Nested Loops, Analyzing Recursive Functions, Recurrence Relations Introduction, Amortized Analysis Introduction, Constraints to Complexity Mapping, Asymptotic vs Practical Performance.
+
+3. Basic Mathematics
+Addition, Subtraction, Multiplication, Division, Modulo, Absolute Value, Floor and Ceiling, Integer Division, Rounding, Even and Odd Numbers, Number Systems, Number Base Conversion, Digit Extraction, Count Digits, Reverse a Number, Palindrome Number, Sum of Digits, Armstrong Number, Perfect Number, Powers and Exponents, Logarithms, Square Root, Arithmetic Progression, Geometric Progression, Series and Summations, Sets and Venn Diagrams, Mathematical Induction, Proof Techniques, GCD, LCM, Euclidean Algorithm, Prime Number Checking, Prime Factorization, Divisors of a Number, Count of Divisors, Sum of Divisors, Sieve of Eratosthenes, Smallest Prime Factor Sieve, Factorials, Fast Power (Binary Exponentiation), Modular Arithmetic Basics, Modular Addition, Modular Subtraction, Modular Multiplication, Modular Exponentiation, Fibonacci Numbers, Pascal's Triangle, Probability Basics, Expected Value Basics.
+
+4. Bit Manipulation Basics
+Binary Number System, Decimal to Binary, Binary to Decimal, Two's Complement, Bitwise AND, Bitwise OR, Bitwise XOR, Bitwise NOT, Left Shift, Right Shift, Check Ith Bit, Set Ith Bit, Clear Ith Bit, Toggle Ith Bit, Count Set Bits, Brian Kernighan's Algorithm, Power of Two Check, Lowest Set Bit, Highest Set Bit, XOR Properties, XOR from 1 to N, Single Number, Two Unique Numbers, Swap Without Temporary Variable, Generate Subsets Using Bitmask, Gray Code, Bit Tricks and Hacks.
+
+=====================================================================
+LEVEL 2 — CORE LINEAR DATA STRUCTURES AND BASIC TECHNIQUES
+=====================================================================
+
+5. Arrays
+Array Traversal, Array Insertion, Array Deletion, Array Updating, Array Searching, Array Reversal, Array Rotation, Left Rotation, Right Rotation, Cyclic Rotation, Array Copying, Array Merging, Array Splitting, Array Sorting, Duplicate Removal, Frequency Counting, Maximum Element, Minimum Element, Second Largest Element, Kth Largest Element, Kth Smallest Element, Missing Number, Repeating Number, Find Missing and Repeating Number, Majority Element, Moore's Voting Algorithm, Leaders in an Array, Equilibrium Index, Stock Buy and Sell (All Variants), Maximum Subarray Sum, Kadane's Algorithm, Maximum Product Subarray, Product Except Self, Subarray Generation, Subarray Sum, Subarray XOR, Circular Subarray, Array Partitioning, Dutch National Flag Algorithm, Next Permutation, Previous Permutation, Merge Intervals, Insert Interval, Overlapping Intervals, Rearrange Array Alternately, Rearrange by Sign, Union and Intersection of Arrays, Longest Consecutive Sequence, Cyclic Sort, Find Duplicate Number (Floyd's), Trapping Rain Water, Container With Most Water.
+
+6. Matrices and 2D Arrays
+2D Array Traversal, Row-Major and Column-Major Order, Matrix Addition, Matrix Multiplication, Matrix Transpose, Rotate Matrix by 90 Degrees, Spiral Traversal, Diagonal Traversal, Zigzag Matrix Traversal, Set Matrix Zeroes, Search in Row-Column Sorted Matrix, Search in 2D Matrix, Median in Row-Wise Sorted Matrix, Pascal's Triangle, Game of Life, Valid Sudoku, Boundary Traversal, Sparse Matrix Representation, Matrix Exponentiation Introduction.
+
+7. Strings (Basic and Intermediate)
+String Traversal, String Reversal, String Concatenation, Substring, Subsequence, String Comparison, Character Frequency, Character Counting, Palindrome Checking, Anagram Checking, String Rotation, String Compression, String Expansion, Duplicate Character Removal, First Non-Repeating Character, Longest Common Prefix, Longest Common Suffix, Longest Palindromic Substring, Longest Repeating Substring, Valid Parentheses, Reverse Words in a String, String to Integer (atoi), Roman to Integer, Integer to Roman, Add Binary Strings, Multiply Large Numbers as Strings, Isomorphic Strings, Lexicographical Ordering, ASCII Operations, Case Conversion, Run-Length Encoding, String Matching (Naive), Pattern Matching, Count and Say, Zigzag Conversion.
+
+8. Hashing
+Hash Functions, Hash Tables, Hash Maps, Hash Sets, Load Factor, Rehashing, Collision Handling, Separate Chaining, Open Addressing, Linear Probing, Quadratic Probing, Double Hashing, Cuckoo Hashing, Frequency Maps, Frequency Counting, Duplicate Detection, Two Sum, Group Anagrams, Longest Consecutive Sequence, Subarray Sum Equals K, Subarray XOR Equals K, Longest Subarray with Sum K, Count Subarrays with Given XOR, First Non-Repeating Element, Distinct Elements in a Window, Hash-Based String Matching, Polynomial Hashing, Rolling Hash, Double Hashing for Strings, Collision Probability, Universal Hashing, Perfect Hashing, Bloom Filter.
+
+9. Recursion Fundamentals
+Recursion Fundamentals, Base Case, Recursive Case, Call Stack, Recursion Tree, Head Recursion, Tail Recursion, Tree Recursion, Multiple Recursion, Indirect Recursion, Recursion on Arrays, Recursion on Strings, Recursion on Numbers, Factorial, Fibonacci, Power Function, Tower of Hanoi, Print 1 to N, Sum of Digits, Reverse Using Recursion, Palindrome Using Recursion, Recursion to Iteration Conversion, Stack Overflow in Recursion.
+
+10. Searching Algorithms
+Linear Search, Binary Search, Recursive Binary Search, Iterative Binary Search, Lower Bound, Upper Bound, First Occurrence, Last Occurrence, Count Occurrences, Search Insert Position, Search in Rotated Sorted Array, Search in Rotated Array with Duplicates, Find Minimum in Rotated Sorted Array, Search in Nearly Sorted Array, Search in 2D Matrix, Peak Element Search, Bitonic Array Search, Single Element in Sorted Array, Ternary Search, Jump Search, Interpolation Search, Exponential Search, Binary Search on Answer, Parametric Search, Integer Square Root, Nth Root of a Number, Floating Point Binary Search, Aggressive Cows / Allocate Books / Painter's Partition (Binary Search Patterns), Koko Eating Bananas, Median of Two Sorted Arrays, Kth Element of Two Sorted Arrays.
+
+11. Sorting Algorithms
+Bubble Sort, Selection Sort, Insertion Sort, Binary Insertion Sort, Shell Sort, Merge Sort, Quick Sort, Randomized Quick Sort, Three-Way Quick Sort, Heap Sort, Counting Sort, Radix Sort, Bucket Sort, Cycle Sort, Tim Sort, Intro Sort, Pancake Sort, Comb Sort, Gnome Sort, Pigeonhole Sort, Bitonic Sort, Odd-Even Sort, External Sorting, Stable Sorting, Unstable Sorting, In-Place Sorting, Adaptive Sorting, Custom Comparator Sorting, Sort by Frequency, Sort Colors, Merge Sort for Inversion Counting, Topological Sorting (see Graphs), Lower Bound of Comparison Sorting.
+
+12. Two Pointers
+Opposite Direction Two Pointers, Same Direction Two Pointers, Slow and Fast Pointers, Pair Sum, Three Sum, Three Sum Closest, Four Sum, Container With Most Water, Trapping Rain Water, Remove Duplicates from Sorted Array, Move Zeroes, Merge Two Sorted Arrays, Intersection of Sorted Arrays, Union of Sorted Arrays, Palindrome Checking, Dutch National Flag, Partition Array, Subarray Two Pointers, Sliding Window with Two Pointers, Sort Colors, Squares of Sorted Array.
+
+13. Sliding Window
+Fixed Size Sliding Window, Variable Size Sliding Window, Maximum Sum Subarray of Size K, Minimum Sum Subarray of Size K, Maximum Average Subarray, Longest Substring Without Repeating Characters, Longest Substring with K Distinct Characters, Minimum Window Substring, Longest Repeating Character Replacement, Count Anagrams in String, Permutation in String, Smallest Subarray with Given Sum, Maximum Consecutive Ones, Fruit Into Baskets, Sliding Window Maximum, Sliding Window Minimum, Monotonic Deque, Frequency-Based Sliding Window, At Most K Distinct Elements, Exactly K Distinct Elements, Subarrays with K Different Integers, Count Number of Nice Subarrays, First Negative Number in Every Window.
+
+14. Prefix Sum and Difference Arrays
+Prefix Sum, Suffix Sum, Prefix Product, Prefix XOR, Prefix Frequency, Prefix Minimum, Prefix Maximum, 2D Prefix Sum, Matrix Prefix Sum, Range Sum Queries, Subarray Sum Equals K, Count Subarrays with Given Sum, Maximum Subarray Sum Using Prefix Sum, Prefix Sum with Hash Map, Prefix Sum with Modulo, Subarray Sums Divisible by K, Contiguous Array (Equal 0s and 1s), Difference Array, Range Update Queries, 2D Difference Array, Car Pooling / Meeting Rooms using Difference Array, Coordinate Compression.
+
+15. Linked Lists
+Linked List Fundamentals, Node Creation, Head and Tail Pointers, Singly Linked List, Doubly Linked List, Circular Linked List, Circular Doubly Linked List, Linked List Traversal, Insertion at Head, Insertion at Tail, Insertion at Position, Deletion at Head, Deletion at Tail, Deletion by Value, Deletion by Position, Searching in Linked List, Updating Nodes, Dummy Node Technique, Reversing Linked List, Recursive Linked List Reversal, Reverse in Between Positions, Finding Middle Node, Slow and Fast Pointers, Cycle Detection, Floyd's Cycle Detection Algorithm, Finding Cycle Starting Point, Removing Cycle, Finding Nth Node from End, Remove Nth Node from End, Merge Two Sorted Linked Lists, Merge K Sorted Linked Lists, Sort Linked List, Palindrome Linked List, Intersection of Two Linked Lists, Add Two Numbers as Linked Lists, Reverse Nodes in K Groups, Rotate Linked List, Segregate Even and Odd Nodes, Delete Duplicates from Sorted List, Clone Linked List with Random Pointer, Flatten Multilevel Linked List, XOR Linked List, Skip List, LRU Cache Implementation, LFU Cache Implementation.
+
+16. Stacks
+Stack Fundamentals, LIFO Principle, Push Operation, Pop Operation, Peek Operation, Stack Overflow, Stack Underflow, Array-Based Stack, Linked List-Based Stack, Dynamic Stack, Balanced Parentheses, Valid Parentheses, Minimum Add to Make Parentheses Valid, Longest Valid Parentheses, Infix Expression, Prefix Expression, Postfix Expression, Infix to Postfix Conversion, Infix to Prefix Conversion, Postfix Evaluation, Prefix Evaluation, Basic Calculator Problems, Next Greater Element, Next Smaller Element, Previous Greater Element, Previous Smaller Element, Monotonic Increasing Stack, Monotonic Decreasing Stack, Stock Span Problem, Largest Rectangle in Histogram, Maximal Rectangle, Sum of Subarray Minimums, Remove K Digits, Daily Temperatures, Asteroid Collision, Decode String, Simplify Path, Min Stack, Max Stack, Two Stacks in One Array, Sort a Stack Using Recursion, Reverse a Stack Using Recursion, Celebrity Problem.
+
+17. Queues and Deques
+Queue Fundamentals, FIFO Principle, Enqueue, Dequeue, Front, Rear, Array-Based Queue, Linked List-Based Queue, Circular Queue, Deque, Input-Restricted Deque, Output-Restricted Deque, Priority Queue, Monotonic Queue, Queue Using Two Stacks, Stack Using Two Queues, Queue Using One Stack (Recursion), Sliding Window Maximum, Sliding Window Minimum, First Negative Number in Every Window, Generate Binary Numbers Using Queue, Rotten Oranges (Queue Application), LRU Cache, BFS Queue Implementation, Task Scheduler, Moving Average from Data Stream.
+
+=====================================================================
+LEVEL 3 — INTERMEDIATE ALGORITHM PARADIGMS
+=====================================================================
+
+18. Recursion and Backtracking
+Backtracking Fundamentals, State Space Tree, Choose-Explore-Unchoose Pattern, Generate Subsequences, Generate Subsets, Subsets with Duplicates, Generate Permutations, Permutations with Duplicates, Generate Combinations, Combination Sum (All Variants), Subset Sum, Palindrome Partitioning, Generate Parentheses, Letter Combinations of a Phone Number, Restore IP Addresses, N-Queens Problem, Sudoku Solver, Rat in a Maze, Word Search, Word Break (Backtracking), Graph Coloring, M-Coloring Problem, Hamiltonian Path, Hamiltonian Cycle, Knight's Tour, Partition to K Equal Sum Subsets, Matchsticks to Square, Expression Add Operators, Branch and Bound, Pruning, Constraint Satisfaction, Meet in the Middle (Intro).
+
+19. Greedy Algorithms
+Greedy Fundamentals, Greedy Choice Property, Optimal Substructure, Exchange Argument, Greedy Stays Ahead Argument, Activity Selection, Interval Scheduling, Fractional Knapsack, Job Sequencing with Deadlines, Minimum Platforms, Meeting Rooms, Non-Overlapping Intervals, Minimum Number of Arrows to Burst Balloons, Assign Cookies, Jump Game I and II, Gas Station Problem, Candy Distribution, Lemonade Change, Huffman Coding, Egyptian Fractions, Minimum Number of Coins, Maximum Number of Activities, Interval Merging, Interval Partitioning, Minimize Maximum Lateness, Task Scheduler (Greedy), Minimum Cost to Connect Ropes, Reorganize String, Partition Labels, Kruskal's Algorithm, Prim's Algorithm, Dijkstra's Algorithm, Greedy Scheduling, Matroid Basics.
+
+20. Divide and Conquer
+Divide and Conquer Fundamentals, Divide Step, Conquer Step, Combine Step, Merge Sort, Quick Sort, Binary Search, Closest Pair of Points, Maximum Subarray (Divide and Conquer), Count Inversions, Median of Two Sorted Arrays, Power Function, Strassen's Matrix Multiplication, Karatsuba Multiplication, Fast Fourier Transform, Skyline Problem, Recurrence Relations, Master Theorem, Akra-Bazzi Method, Divide and Conquer DP Optimization (see DP).
+
+21. Binary Trees
+Tree Fundamentals, Root Node, Parent Node, Child Node, Leaf Node, Sibling Nodes, Subtree, Tree Height, Tree Depth, Tree Level, Binary Tree Creation, Full Binary Tree, Complete Binary Tree, Perfect Binary Tree, Balanced Binary Tree, Degenerate Binary Tree, Skewed Binary Tree, Inorder Traversal, Preorder Traversal, Postorder Traversal, Level Order Traversal, Iterative Inorder Traversal, Iterative Preorder Traversal, Iterative Postorder Traversal, Zigzag Traversal, Boundary Traversal, Vertical Order Traversal, Diagonal Traversal, Top View, Bottom View, Left View, Right View, Height of Binary Tree, Diameter of Binary Tree, Maximum Width, Count Nodes, Count Complete Tree Nodes, Sum of Nodes, Maximum Path Sum, Root to Leaf Paths, Path Sum Problems, Lowest Common Ancestor, Check Balanced Tree, Symmetric Tree, Identical Trees, Invert Binary Tree, Flatten Binary Tree to Linked List, Children Sum Property, All Nodes at Distance K, Burn a Tree, Serialize and Deserialize Binary Tree, Construct Tree from Traversals, Binary Tree Cameras, Morris Traversal, N-ary Trees, Threaded Binary Trees.
+
+22. Binary Search Trees and Balanced Trees
+BST Fundamentals, BST Search, BST Insertion, BST Deletion, Minimum Element, Maximum Element, Inorder Successor, Inorder Predecessor, Validate BST, Lowest Common Ancestor in BST, Kth Smallest Element, Kth Largest Element, Floor in BST, Ceiling in BST, Range Sum in BST, BST Iterator, Two Sum in BST, Convert Sorted Array to BST, Convert Sorted List to BST, Construct BST from Preorder, Recover BST, Largest BST in Binary Tree, Merge Two BSTs, Balanced BST, AVL Tree, AVL Rotations, Red-Black Tree, 2-3 Tree, 2-3-4 Tree, B-Tree, B+ Tree, Treap, Splay Tree, Scapegoat Tree, Cartesian Tree, Order Statistic Tree.
+
+23. Heaps and Priority Queues
+Heap Fundamentals, Complete Binary Tree, Min Heap, Max Heap, Heap Insertion, Heap Deletion, Heapify Up, Heapify Down, Build Heap, Heap Sort, Priority Queue, Kth Largest Element, Kth Smallest Element, Top K Frequent Elements, Top K Frequent Words, Sort Characters by Frequency, Merge K Sorted Arrays, Merge K Sorted Linked Lists, Find Median from Data Stream, Running Median, Sliding Window Median, Smallest Range Covering K Lists, K Closest Points, Task Scheduling, Minimum Cost to Connect Ropes, IPO / Maximize Capital, Two Heaps Pattern, Lazy Deletion in Heaps, Indexed Priority Queue, d-ary Heap, Binomial Heap, Fibonacci Heap, Pairing Heap, Leftist Heap, Skew Heap.
+
+24. Tries
+Trie Fundamentals, Trie Node, Trie Insertion, Trie Search, Prefix Search, Starts With, Word Dictionary with Wildcards, Count Prefixes, Delete Word from Trie, Autocomplete System, Longest Word in Dictionary, Word Search II, Replace Words, Binary Trie, Maximum XOR Pair, Maximum XOR with Queries, Compressed Trie, Radix Tree, Ternary Search Tree, Suffix Trie.
+
+=====================================================================
+LEVEL 4 — GRAPHS (Basic to Intermediate)
+=====================================================================
+
+25. Graph Fundamentals
+Graph Terminology, Vertices, Edges, Degree, In-Degree, Out-Degree, Paths, Cycles, Connected Graphs, Disconnected Graphs, Directed Graphs, Undirected Graphs, Weighted Graphs, Unweighted Graphs, Complete Graphs, Bipartite Graphs, Cyclic Graphs, Acyclic Graphs, Multigraphs, Self Loops, Trees as Graphs, Adjacency Matrix, Adjacency List, Edge List, Incidence Matrix, Graph Construction, Graph Traversal, BFS, DFS, Recursive DFS, Iterative DFS, DFS Tree and Edge Classification (Tree, Back, Forward, Cross Edges), Discovery and Finishing Times, Connected Components, Cycle Detection in Undirected Graphs, Cycle Detection in Directed Graphs, Bipartite Graph Checking, Shortest Path in Unweighted Graphs, Clone Graph, Word Ladder, Course Schedule Problems.
+
+26. Grid and Implicit Graph Problems
+Grid BFS, Grid DFS, Multi-Source BFS, Flood Fill, Number of Islands, Number of Distinct Islands, Enclaves, Rotten Oranges, Surrounded Regions, 01 Matrix, Shortest Path in Binary Matrix, Path With Minimum Effort, Swim in Rising Water, Bidirectional BFS, State-Space BFS, Knight Moves, Open the Lock, Sliding Puzzle, Graph Valid Tree.
+
+27. Shortest Path Algorithms
+Dijkstra's Algorithm, Dijkstra with Priority Queue, Bellman-Ford Algorithm, Floyd-Warshall Algorithm, 0-1 BFS, SPFA, DAG Shortest Paths, Johnson's Algorithm, Negative Cycle Detection, Path Reconstruction, Multi-Source Dijkstra, Shortest Path with K Stops, Cheapest Flights Within K Stops, Network Delay Time, Number of Ways to Reach Destination, Second Shortest Path, Shortest Path Counting, Transitive Closure, A* Search Algorithm, Bidirectional Dijkstra, Dial's Algorithm.
+
+28. Topological Sort and DAGs
+Directed Acyclic Graphs, Topological Sort, Kahn's Algorithm, DFS-Based Topological Sort, Lexicographically Smallest Topological Order, Course Schedule I and II, Alien Dictionary, Longest Path in DAG, Critical Path Method, Parallel Courses, Find Eventual Safe States, Build Order, Detect Cycle Using Topological Sort.
+
+29. Disjoint Set Union (DSU / Union-Find)
+DSU Fundamentals, Find Operation, Union Operation, Parent Array, Path Compression, Union by Rank, Union by Size, Component Counting, Connected Component Queries, Number of Provinces, Redundant Connection, Accounts Merge, Most Stones Removed, Making a Large Island, Dynamic Connectivity, Cycle Detection Using DSU, Weighted DSU, DSU with Bipartiteness, Offline Connectivity Queries, DSU on Trees, Small to Large Merging, Rollback DSU, Persistent DSU.
+
+30. Minimum Spanning Trees
+Minimum Spanning Tree, Spanning Tree Properties, Cut Property, Cycle Property, Prim's Algorithm, Kruskal's Algorithm, Borůvka's Algorithm, Reverse-Delete Algorithm, Second Best MST, MST Edge Classification (Critical and Pseudo-Critical Edges), Minimum Spanning Arborescence (Chu-Liu/Edmonds), Steiner Tree, Maximum Spanning Tree, Minimum Bottleneck Spanning Tree, Kirchhoff's Matrix Tree Theorem, Cayley's Formula, Prüfer Code.
+
+31. Graph Connectivity
+Strongly Connected Components, Kosaraju's Algorithm, Tarjan's Algorithm, Condensation Graph (SCC DAG), Bridges in Graphs, Articulation Points, Biconnected Components, Block-Cut Tree, Bridge Tree, 2-Edge-Connected Components, Eulerian Path, Eulerian Circuit, Hierholzer's Algorithm, Hamiltonian Path, Hamiltonian Cycle, Chinese Postman Problem, Graph Coloring, Chromatic Number, Planar Graphs, Chordal Graphs, Cliques, Independent Sets.
+
+=====================================================================
+LEVEL 5 — DYNAMIC PROGRAMMING (Basic to Advanced)
+=====================================================================
+
+32. Dynamic Programming — Fundamentals and Classic Problems
+DP Fundamentals, Overlapping Subproblems, Optimal Substructure, Memoization, Tabulation, Bottom-Up DP, Top-Down DP, Space Optimization, Rolling Array, State Definition, State Transition, Base Cases, 1D DP, 2D DP, 3D DP, Grid DP, Fibonacci DP, Climbing Stairs, Frog Jump, Frog Jump with K Steps, House Robber I, II and III, Maximum Sum of Non-Adjacent Elements, Minimum Cost Climbing Stairs, Unique Paths, Unique Paths with Obstacles, Minimum Path Sum, Triangle, Maximum Path Sum in Matrix, Cherry Pickup, Ninja's Training, Maximal Square, Count Square Submatrices, Decode Ways, Jump Game (DP), Best Time to Buy and Sell Stock (DP Variants), Maximum Product Subarray (DP), Dice Throw, Painting Fence, Tiling Problems, Catalan Number DP (Unique BSTs, Parentheses).
+
+33. Dynamic Programming — Knapsack and Subsequence Patterns
+0/1 Knapsack, Unbounded Knapsack, Bounded Knapsack, Multi-Dimensional Knapsack, Subset Sum, Equal Partition, Partition with Minimum Difference, Count Subsets with Given Sum, Target Sum, Count Partitions with Given Difference, Coin Change (Minimum Coins), Coin Change (Number of Ways), Rod Cutting, Perfect Squares, Combination Sum IV, Longest Common Subsequence, Print LCS, Longest Common Substring, Shortest Common Supersequence, Longest Increasing Subsequence, LIS in O(n log n), Print LIS, Number of LIS, Longest Decreasing Subsequence, Longest Bitonic Subsequence, Largest Divisible Subset, Russian Doll Envelopes, Maximum Sum Increasing Subsequence, Longest String Chain, Longest Palindromic Subsequence, Longest Palindromic Substring, Minimum Insertions to Make Palindrome, Edit Distance, Distinct Subsequences, Wildcard Matching, Regular Expression Matching, Interleaving String, Word Break, Palindrome Partitioning (DP), Minimum Deletions and Insertions to Convert Strings.
+
+34. Dynamic Programming — Intermediate to Advanced Patterns
+Matrix Chain Multiplication, Interval DP, Partition DP, Burst Balloons, Minimum Cost to Cut a Stick, Palindrome Partitioning II, Boolean Parenthesization, Egg Dropping Problem, Stone Game Variants, Optimal Binary Search Tree, Scramble String, Tree DP, DP on Trees, Diameter of Tree using DP, Maximum Independent Set on Trees, Tree Matching, Minimum Vertex Cover on Trees, Rerooting DP, Tree Rerooting, Graph DP, DP on DAGs, DP on Subsequences, DP on Strings, Counting DP, Probability DP, Expected Value DP, Bitmask DP, DP with Bitmasks, Subset DP, Travelling Salesperson Problem, Hamiltonian Path DP, Shortest Hamiltonian Path, Assignment Problem (Bitmask DP), Minimum Cost Matching, Digit DP, Profile DP, Broken Profile DP, Connected Component DP, Insertion DP, SOS DP (Sum Over Subsets), Steiner Tree DP, DP with Matrix Exponentiation, Game DP (Minimax and Memoization), Longest Path DP, DP with Two Pointers, DP on Intervals with Monotonic Structure.
+
+=====================================================================
+LEVEL 6 — INTERMEDIATE TO ADVANCED DATA STRUCTURES
+=====================================================================
+
+35. Fenwick Tree (Binary Indexed Tree)
+Fenwick Tree, Binary Indexed Tree, Point Update, Prefix Sum Query, Range Sum Query, Range Update with Point Query, Range Update with Range Query, 2D Fenwick Tree, Coordinate Compression with Fenwick Tree, Inversion Count, Count Smaller Elements After Self, Order Statistics with Fenwick Tree, Fenwick Tree Binary Lifting (Find Kth Element), Offline Queries with Fenwick Tree.
+
+36. Segment Tree
+Segment Tree Fundamentals, Segment Tree Construction, Point Update, Point Query, Range Sum Query, Range Minimum Query, Range Maximum Query, Range GCD Query, Lazy Propagation, Range Update, Range Query, Range Assignment, Segment Tree with Pair Values, Segment Tree with Custom Merge Functions, Iterative Segment Tree, Segment Tree Descent (Find First / Kth), Persistent Segment Tree, Dynamic Segment Tree, Sparse Segment Tree, Merge Sort Tree, Segment Tree Beats, 2D Segment Tree, Segment Tree on Trees, Segment Tree Merging, Kinetic Segment Tree, Li Chao Tree.
+
+37. Range Query Structures and Techniques
+Sparse Table, Disjoint Sparse Table, Range Minimum Query (RMQ), Square Root Decomposition, Block Decomposition, Sqrt Tree, Mo's Algorithm, Mo's Algorithm with Updates, Mo's Algorithm on Trees, Wavelet Tree, Wavelet Tree Queries, Range Kth Smallest Query, Range Frequency Queries, Range Mode Query, Dynamic Range Queries, Offline Range Queries, Persistent Data Structures, Persistent Array, Persistent Treap, Functional Data Structures, Range Query Optimization.
+
+38. Advanced Data Structures
+Ordered Set, Ordered Multiset, Order Statistic Tree, Policy Based Data Structures (PBDS), Randomized Treap, Implicit Treap, Rope Data Structure, Skip List, Interval Tree, Segment Tree vs Interval Tree, KD-Tree, Quadtree, Octree, R-Tree, Van Emde Boas Tree, Y-Fast Trie, X-Fast Trie, Dynamic Array, Gap Buffer, Count-Min Sketch, HyperLogLog, Bloom Filter, Cuckoo Filter, MinHash, Locality Sensitive Hashing, Union-Find with Rollback, Link-Cut Tree, Euler Tour Tree, Top Tree, Finger Tree, Cache-Oblivious Data Structures.
+
+=====================================================================
+LEVEL 7 — ADVANCED STRING ALGORITHMS
+=====================================================================
+
+39. Advanced String Algorithms and Data Structures
+String Hashing, Rolling Hash, Rabin-Karp Algorithm, Knuth-Morris-Pratt Algorithm (KMP), Prefix Function, Z Algorithm, Boyer-Moore Algorithm, Bitap Algorithm, Manacher's Algorithm, Aho-Corasick Algorithm, Suffix Array, Suffix Array Construction (Naive and Doubling), SA-IS Algorithm, Suffix Automaton, Suffix Tree, Ukkonen's Algorithm, LCP Array (Kasai's Algorithm), LCP Queries using RMQ, Longest Repeated Substring, Longest Common Substring of Multiple Strings, Generalized Suffix Array, Generalized Suffix Tree, Number of Distinct Substrings, Duval's Algorithm, Lyndon Factorization, Booth's Algorithm, Minimum Lexicographical Rotation, String Periodicity, String Borders, Prefix Function Applications, Palindromic Tree (Eertree), Online Palindrome Queries, Burrows-Wheeler Transform, LZ77 / LZ78 / LZW Compression, Huffman Coding (Strings), Edit Distance Variants (Levenshtein, Damerau), Approximate String Matching, Wildcard Pattern Matching with FFT, Regular Expression Engines (NFA/DFA), Finite Automata for String Matching.
+
+=====================================================================
+LEVEL 8 — ADVANCED GRAPH ALGORITHMS
+=====================================================================
+
+40. Trees — Advanced Algorithms
+Tree Diameter, Tree Centers, Tree Centroid, Lowest Common Ancestor (Binary Lifting), LCA using Euler Tour and RMQ, Tarjan Offline LCA, Binary Lifting, Binary Lifting with Path Queries, Euler Tour Technique, Subtree Queries, Path Queries on Trees, Heavy-Light Decomposition, Heavy-Light Decomposition with Segment Tree, Centroid Decomposition, DSU on Tree (Sack), Small to Large Tree Merging, Virtual Tree (Auxiliary Tree), Tree Isomorphism, Tree Hashing, Rerooting Techniques, Link-Cut Tree, Euler Tour Tree, Dynamic Tree Connectivity, Top Tree, Tree Path Decomposition, Tree Knapsack, Tree Binary Search (Centroid and Binary Search).
+
+41. Network Flow and Matching
+Network Flow Fundamentals, Residual Graph, Maximum Flow, Minimum Cut, Max-Flow Min-Cut Theorem, Ford-Fulkerson Algorithm, Edmonds-Karp Algorithm, Dinic's Algorithm, Push-Relabel Algorithm, Capacity Scaling, Vertex Capacity Flow, Edge Capacity Flow, Flow with Lower Bounds, Circulation with Demands, Maximum Bipartite Matching, Hopcroft-Karp Algorithm, Kuhn's Algorithm, König's Theorem, Minimum Bipartite Vertex Cover, Maximum Independent Set in Bipartite Graphs, Minimum Path Cover in DAG, Dilworth's Theorem, Hall's Marriage Theorem, Weighted Bipartite Matching, Assignment Problem using Hungarian Algorithm, Minimum Cost Maximum Flow, Minimum Cost Circulation, Successive Shortest Augmenting Path, Cycle Canceling, General Graph Matching, Blossom Algorithm, Gabow's Algorithm, Stable Marriage Problem (Gale-Shapley), Global Minimum Cut (Stoer-Wagner), Gomory-Hu Tree, Project Selection (Closure Problem), Image Segmentation using Min Cut, Baseball Elimination.
+
+42. Advanced Graph Algorithms — Special Topics
+2-SAT, 2-SAT using SCC, Implication Graph, Dominator Tree, Offline Dynamic Connectivity, Dynamic Graph Connectivity, Strong Orientation of Graphs, Iterative Deepening DFS, Iterative Deepening A*, Yen's K-Shortest Paths Algorithm, Eppstein's K-Shortest Paths, Minimum Mean Cycle (Karp's Algorithm), Parametric Search on Graphs, Graph Isomorphism Basics, Planar Graph Algorithms, Graph Coloring Heuristics, Randomized Min-Cut (Karger's Algorithm), Randomized Algorithms for Graph Connectivity, Spectral Graph Basics, Graph Sparsification, Tree Decomposition and Treewidth, Cop and Robber Games.
+
+=====================================================================
+LEVEL 9 — MATHEMATICS, NUMBER THEORY AND COMBINATORICS
+=====================================================================
+
+43. Intermediate Number Theory and Combinatorics
+Segmented Sieve, Linear Sieve, Euler's Totient Function, Totient Sieve, Modular Inverse, Fermat's Little Theorem, Extended Euclidean Algorithm, Chinese Remainder Theorem, Linear Diophantine Equations, Permutations, Combinations, Binomial Coefficients, nCr Modulo Prime, Factorial Precomputation, Inverse Factorial Precomputation, Fast nCr Queries, Pascal's Triangle Identities, Stars and Bars, Catalan Numbers, Matrix Exponentiation, Fibonacci in O(log n), Inclusion-Exclusion Principle, Pigeonhole Principle, Double Counting, Probability, Conditional Probability, Bayes' Theorem, Expected Value, Linearity of Expectation, Combinatorics Problems, Birthday Paradox, Geometric Distribution Basics.
+
+44. Advanced Number Theory
+Prime Sieves, Smallest Prime Factor, Mobius Function, Divisor Function, Euler's Theorem, Wilson's Theorem, Primitive Roots, Order of an Element, Discrete Logarithm, Baby-Step Giant-Step, Pollard Rho Factorization, Pollard p-1 Algorithm, Miller-Rabin Primality Test, Fermat Primality Test, AKS Primality Test (Concept), Lucas Theorem, Kummer's Theorem, Legendre's Formula, Quadratic Residues, Legendre Symbol, Jacobi Symbol, Tonelli-Shanks Algorithm, Cipolla's Algorithm, Garner's Algorithm, Montgomery Multiplication, Barrett Reduction, Mobius Inversion, Multiplicative Functions, Dirichlet Convolution, Dirichlet Prefix Sums, Min_25 Sieve, Lucy Hedgehog Algorithm (Prime Counting), Meissel-Lehmer Algorithm, Floor Sum Algorithm, Floor Division Blocks (Harmonic Lemma), Pell's Equation, Continued Fractions, Farey Sequences, Stern-Brocot Tree, Gaussian Integers, GCD Convolutions, LCM Convolutions.
+
+45. Advanced Combinatorics and Counting
+Stirling Numbers (First and Second Kind), Bell Numbers, Derangements, Integer Partitions, Generating Functions, Exponential Generating Functions, Linear Recurrence Relations, Characteristic Equation Method, Burnside's Lemma, Polya Enumeration Theorem, Principle of Inclusion-Exclusion (Advanced), Lagrange Inversion, Lindström–Gessel–Viennot Lemma, Counting Spanning Trees, Matrix-Tree Theorem Applications, Counting Lattice Paths, Ballot Theorem, Reflection Principle, Dyck Paths, Young Tableaux, Hook Length Formula, Necklace and Bracelet Counting, Counting Labeled and Unlabeled Trees, Burnside with Group Actions, Subset Convolution Applications.
+
+46. Polynomials, Linear Algebra and Numerical Algorithms
+Fast Fourier Transform (FFT), Number Theoretic Transform (NTT), NTT-Based Convolution, Arbitrary Modulus Convolution, Fast Polynomial Multiplication, Polynomial Division, Polynomial Modulo, Polynomial Inverse, Polynomial Logarithm and Exponential, Polynomial Multipoint Evaluation, Polynomial Interpolation, Lagrange Interpolation, Newton's Method for Polynomials, Fast Walsh-Hadamard Transform (FWHT), Subset Convolution, Zeta and Mobius Transform, Linear Recurrence using Polynomial Exponentiation, Kitamasa Algorithm, Berlekamp-Massey Algorithm, Berlekamp-Massey Applications, Gaussian Elimination, Gaussian Elimination over Modulo and GF(2), Matrix Determinant, Matrix Inverse, Matrix Rank, Linear Basis (XOR Basis), Simplex Algorithm, Linear Programming Basics, Duality, Newton-Raphson Method, Bisection Method, Numerical Integration (Simpson's Rule), Ternary Search on Functions, Gradient Descent Basics.
+
+=====================================================================
+LEVEL 10 — COMPUTATIONAL GEOMETRY
+=====================================================================
+
+47. Computational Geometry (Basic to Advanced)
+Points and Vectors, Euclidean Distance, Manhattan Distance, Chebyshev Distance, Dot Product, Cross Product, Orientation of Three Points, Collinearity, Line Representation, Line Intersection, Segment Intersection, Point in Polygon, Polygon Area, Shoelace Formula, Pick's Theorem, Convex Hull, Graham Scan, Jarvis March, Andrew's Monotonic Chain, Closest Pair of Points, Sweep Line Algorithm, Line Sweep, Bentley-Ottmann Algorithm, Rotating Calipers, Half-Plane Intersection, Half-Plane Intersection Applications, Circle-Circle Intersection, Line-Circle Intersection, Tangents to Circles, Tangent to Polygon, Convex Polygon Intersection, Convex Polygon Diameter, Minkowski Sum, Minimum Enclosing Circle (Welzl's Algorithm), Largest Empty Circle, Point-to-Line Distance, Point-to-Segment Distance, Polygon Clipping, Polygon Triangulation, Art Gallery Problem, Voronoi Diagram, Delaunay Triangulation, Fortune's Algorithm, Convex Hull Trick (Geometry View), Trapezoidal Decomposition, Point Location, 3D Geometry, 3D Convex Hull, 3D Distance and Intersection Problems, Duality Transform in Geometry.
+
+=====================================================================
+LEVEL 11 — ADVANCED DP OPTIMIZATIONS AND PARADIGMS
+=====================================================================
+
+48. Advanced Dynamic Programming Optimization
+Convex Hull Trick, Convex Hull Trick Optimization, Dynamic Convex Hull Trick, Li Chao Tree DP Optimization, Divide and Conquer DP Optimization, Knuth Optimization, Knuth-Yao Optimization, Aliens Trick, Lagrangian Relaxation (WQS Binary Search), Monotone Queue Optimization, Monotonicity Optimization, Slope Trick, SMAWK Algorithm, DP with Monge Properties, DP with Quadrangle Inequality, Bitset DP Optimization, Rerooting DP Optimization, Memory-Optimized DP, Rolling Array DP, Min-Plus Convolution, DP with Data Structures (Segment Tree / Fenwick Tree Optimization), CDQ Divide and Conquer for DP, Online-Offline DP, Meet in the Middle DP, Sum Over Subsets Optimization, Subset Convolution DP, Linear Recurrence DP Acceleration, Berlekamp-Massey for DP.
+
+=====================================================================
+LEVEL 12 — GAME THEORY, RANDOMIZED AND OFFLINE TECHNIQUES
+=====================================================================
+
+49. Game Theory
+Game Theory Basics, Combinatorial Game Theory, Impartial Games, Partisan Games, Normal Play Convention, Misère Game Convention, Nim Game, Nim Variants, Nim-Sum, Staircase Nim, Sprague-Grundy Theorem, Grundy Numbers, Grundy Function, Mex Function, Game State Analysis, Winning and Losing Positions, Game on DAG, Game on Trees, Game on Graphs, Sprague-Grundy Applications, Minimax, Minimax with Memoization, Alpha-Beta Pruning, Negamax, Monte Carlo Tree Search, Bitmask Game DP, Wythoff's Game, Hackenbush, Surreal Numbers (Concept), Zero-Sum Games, Nash Equilibrium Basics.
+
+50. Randomized and Probabilistic Algorithms
+Randomized Algorithms Basics, Randomized Quick Sort, Randomized Quickselect, Randomized Treap, Randomized Hashing, Universal Hashing, Monte Carlo Algorithms, Las Vegas Algorithms, Reservoir Sampling, Fisher-Yates Shuffle, Randomized Min-Cut, Randomized Algorithms for Graph Connectivity, Randomized Primality Testing, Probabilistic Data Structures, Skip List (Probabilistic), Random Walk Algorithms, Markov Chains, Probabilistic Method, Derandomization, Schwartz-Zippel Lemma, Polynomial Identity Testing, Freivalds' Algorithm, Simulated Annealing, Genetic Algorithms, Hill Climbing.
+
+51. Offline, Online and Specialized Query Techniques
+Offline Queries, Online Queries, CDQ Divide and Conquer, Offline Dynamic Connectivity, Offline LCA, Tarjan Offline LCA, Rollback DSU, Persistent Query Processing, Mo's Algorithm with Modifications, Parallel Binary Search, Whole Binary Search, Small to Large Query Merging, Sweep Line with Events, Divide and Conquer on Queries, Time-Segment Tree, Square Root Decomposition on Queries, Query Reordering, Binary Lifting Queries, Fractional Cascading, Heavy Path Queries, Dynamic Programming on Queries, Coordinate Compression, Offline Sorting Queries.
+
+52. Selection and Advanced Array Algorithms
+Quickselect Algorithm, Randomized Quickselect, Median of Medians, Kth Order Statistics, Median Finding, Inversion Counting, Count Smaller Elements After Self, Maximum Subarray with Constraints, 2D Kadane's Algorithm, Maximum Sum Rectangle in Matrix, Maximum Sum of K Disjoint Subarrays, Longest Subarray with Constraints, Monotonic Stack Optimization, Meet in the Middle, Sparse Table Applications, Binary Lifting, Matrix Exponentiation, Ternary Search, Parallel Binary Search.
+
+=====================================================================
+LEVEL 13 — ALGORITHM ANALYSIS, COMPLEXITY THEORY AND SPECIAL MODELS
+=====================================================================
+
+53. Advanced Algorithm Analysis
+Recurrence Tree Method, Substitution Method, Iterative Method for Recurrences, Master Theorem, Akra-Bazzi Method, Aggregate Method, Accounting Method, Potential Method, Amortized Analysis (Dynamic Arrays, Splay Trees, Union-Find), Decision Tree Analysis, Lower Bound Analysis, Adversary Arguments, Information-Theoretic Lower Bound, Randomized Complexity Analysis, Probabilistic Analysis, Expected Running Time Analysis, Competitive Analysis, Smoothed Analysis.
+
+54. Complexity Theory and NP-Hard Problems
+P, NP, NP-Complete, NP-Hard, co-NP, PSPACE, EXPTIME, Polynomial-Time Reductions, Cook-Levin Theorem, SAT, 3-SAT, Clique, Independent Set, Vertex Cover, Set Cover, Hamiltonian Cycle (NP-Completeness), Travelling Salesperson Problem (NP-Hardness), Subset Sum (Pseudo-Polynomial), Knapsack (Pseudo-Polynomial), Partition Problem, Graph Coloring (NP-Completeness), Bin Packing, Approximation Algorithms, Approximation Ratio, PTAS and FPTAS, Vertex Cover 2-Approximation, TSP Approximation (Christofides), Set Cover Greedy Approximation, Fixed-Parameter Tractable Algorithms, Kernelization, Exponential-Time Algorithms, Branch and Reduce, Heuristics and Metaheuristics, Integer Linear Programming Basics, Halting Problem and Undecidability (Concept).
+
+55. Advanced Algorithmic Models
+Online Algorithms, Competitive Ratio, Paging and Caching Algorithms (LRU, LFU, FIFO, Belady's), Ski Rental Problem, Streaming Algorithms, Reservoir Sampling, Misra-Gries Algorithm, Count-Min Sketch, Flajolet-Martin Algorithm, HyperLogLog, Sliding Window Streaming, External Memory Algorithms, I/O Model Analysis, Cache-Oblivious Algorithms, Parallel Algorithms, PRAM Model, Parallel Prefix Sum, Parallel Merge Sort, Distributed Algorithms Basics, MapReduce Paradigm, Consistent Hashing, Sublinear Algorithms, Property Testing, Succinct Data Structures, Compressed Data Structures, Quantum Algorithms (Concept), Bit-Parallel Algorithms, Bitset Techniques, SIMD-Friendly Algorithms.
+
+=====================================================================
+LEVEL 14 — PROBLEM-SOLVING PATTERNS AND COMPETITIVE TECHNIQUES
+=====================================================================
+
+56. Problem-Solving Patterns (Interview and Contest)
+Brute Force, Optimization from Brute Force, Pattern Recognition, Two Pointers, Sliding Window, Prefix Sum, Hash Map Lookup, Monotonic Stack and Queue, Binary Search on Answer, Fast and Slow Pointers, Merge Intervals, Cyclic Sort, In-Place Reversal of Linked List, Tree BFS, Tree DFS, Two Heaps, Subsets Pattern, Modified Binary Search, Top K Elements, K-Way Merge, Topological Sort Pattern, Bit Manipulation Pattern, Backtracking Pattern, Dynamic Programming Pattern Recognition, Greedy vs DP Decision, Divide and Conquer Pattern, Union Find Pattern, Trie Pattern, Graph Modeling, Problem Reduction, Invariants, Constructive Algorithms, Ad-hoc Problems, Simulation Problems, Interactive Problems, Math-Based Problems, Casework and Proofs, Time-Space Trade-offs, Constraint Analysis, Stress Testing and Brute-Force Checkers, Debugging with Counterexamples.
+
+57. Advanced Competitive Programming Techniques
+Coordinate Compression, Meet in the Middle, Square Root Decomposition, Mo's Algorithm, Sparse Table, Binary Lifting, Euler Tour Technique, Heavy-Light Decomposition, Centroid Decomposition, Small to Large Merging, Offline Queries, Online Queries, Persistent Data Structures, Lazy Propagation, Randomized Algorithms, Probability-Based Algorithms, Game Theory, Convex Hull Trick, Li Chao Tree, Fast Fourier Transform, Number Theoretic Transform, Matrix Exponentiation, Ternary Search, Parallel Binary Search, Divide and Conquer Optimization, Knuth Optimization, Bitset Optimization, Hashing Tricks (Anti-Hash Tests), Xor Basis, Gaussian Elimination in Contests, Inclusion-Exclusion in Contests, SOS DP, Digit DP, Profile DP, Constructive Algorithms, Interactive Problems, Proof by Invariants, Contest Strategy, Time Management in Contests.
+
+=====================================================================
+END OF CHECKLIST
+=====================================================================
