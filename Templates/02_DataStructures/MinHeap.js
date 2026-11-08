@@ -85,6 +85,14 @@ class MinHeap {
         return min;
     }
 
+    peek() {
+        return this.heap[0];
+    }
+
+    isEmpty() {
+        return this.heap.length === 0;
+    }
+
     size() {
         return this.heap.length;
     }

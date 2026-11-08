@@ -1,21 +1,32 @@
-// https://codeforces.com/problemset/problem/
-// node "test.js" < "Input.txt" > "Output.txt"
+// Topic: STACK
+// Pattern: LIFO / Array-Based Stack / Min-Max Stack
+// Use Cases: Balanced parentheses, expression parsing, backtracking,
+// undo operations, monotonic stacks, range minimum tracking.
+//
+// Example Problem: Valid Parentheses
+// Source: Classic stack problem (LeetCode 20 / standard CP).
+//
+// node "Stack.js" < "Input.txt" > "Output.txt"
 
 const fs = require("fs");
 
-const input = fs.readFileSync(0, "utf-8").trim().split(/\s+/).map(Number);
+const tokens = fs.readFileSync(0, "utf-8").trim().split(/\s+/);
 
 let index = 0;
-const t = Number(input[index++]);
+const t = Number(tokens[index++]);
 const outcomes = [];
+
+function nextStr() {
+    return tokens[index++];
+}
 
 class Stack {
     constructor() {
         this.items = [];
     }
 
-    push(val) {
-        this.items.push(val);
+    push(value) {
+        this.items.push(value);
     }
 
     pop() {
@@ -39,46 +50,105 @@ class Stack {
     }
 }
 
-function nextGreater(arr, n) {
-    const stack = [];
-    const result = new Array(n).fill(-1);
-
-    for (let i = n - 1; i >= 0; i--) {
-        while (stack.length && stack[stack.length - 1] <= arr[i]) {
-            stack.pop();
-        }
-
-        if (stack.length) {
-            result[i] = stack[stack.length - 1];
-        }
-
-        stack.push(arr[i]);
+class MinStack {
+    constructor() {
+        this.items = [];
+        this.minimums = [];
     }
 
-    return result;
+    push(value) {
+        this.items.push(value);
+
+        const minimum = this.minimums.length
+            ? Math.min(value, this.minimums[this.minimums.length - 1])
+            : value;
+
+        this.minimums.push(minimum);
+    }
+
+    pop() {
+        this.minimums.pop();
+        return this.items.pop();
+    }
+
+    peek() {
+        return this.items[this.items.length - 1];
+    }
+
+    getMin() {
+        return this.minimums[this.minimums.length - 1];
+    }
+
+    isEmpty() {
+        return this.items.length === 0;
+    }
+
+    size() {
+        return this.items.length;
+    }
 }
 
-function inputArray(n) {
-    let arr = [];
-
-    for (let i = 0; i < n; i++) {
-        const a = Number(input[index++]);
-        arr.push(a);
+class MaxStack {
+    constructor() {
+        this.items = [];
+        this.maximums = [];
     }
 
-    return arr;
+    push(value) {
+        this.items.push(value);
+
+        const maximum = this.maximums.length
+            ? Math.max(value, this.maximums[this.maximums.length - 1])
+            : value;
+
+        this.maximums.push(maximum);
+    }
+
+    pop() {
+        this.maximums.pop();
+        return this.items.pop();
+    }
+
+    peek() {
+        return this.items[this.items.length - 1];
+    }
+
+    getMax() {
+        return this.maximums[this.maximums.length - 1];
+    }
+
+    isEmpty() {
+        return this.items.length === 0;
+    }
+
+    size() {
+        return this.items.length;
+    }
+}
+
+// Approach: push every opening bracket. On a closing bracket, the stack
+// top must be its matching opening bracket.
+function isValidParentheses(text) {
+    const stack = new Stack();
+    const pairs = { ")": "(", "]": "[", "}": "{" };
+
+    for (const ch of text) {
+        if (ch === "(" || ch === "[" || ch === "{") {
+            stack.push(ch);
+        } else if (pairs[ch]) {
+            if (stack.pop() !== pairs[ch]) return false;
+        }
+    }
+
+    return stack.isEmpty();
+}
+
+function solve() {
+    return isValidParentheses(nextStr()) ? "YES" : "NO";
 }
 
 for (let i = 0; i < t; i++) {
-    const n = Number(input[index++]);
-
-    let arr = inputArray(n);
-
-    arr.sort((a, b) => a - b);
-
-    const result = nextGreater(arr, n);
-
-    outcomes.push(result.join(" "));
+    outcomes.push(solve());
 }
 
 console.log(outcomes.join("\n"));

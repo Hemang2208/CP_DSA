@@ -1,10 +1,10 @@
 // Topic: SEARCHING
-// Pattern: Linear Search / Position Mapping
-// Use Cases: Finding an element, building an inverse permutation,
-// locating first or last occurrences in unsorted data.
+// Pattern: Linear Search
+// Use Cases: Finding an element in unsorted data, first and last
+// occurrence, counting matches, minimum and maximum scans.
 //
-// Example Problem: Codeforces 136A - Presents
-// https://codeforces.com/problemset/problem/136/A
+// Example Problem: Find the First, Last and Count of a Target
+// Source: Classic linear-search exercise.
 //
 // node "Searching.js" < "Input.txt" > "Output.txt"
 
@@ -17,40 +17,71 @@ const t = Number(input[index++]);
 const outcomes = [];
 
 function inputArray(n) {
-    let arr = [];
+    const arr = [];
 
     for (let i = 0; i < n; i++) {
-        const a = Number(input[index++]);
-        arr.push(a);
+        arr.push(Number(input[index++]));
     }
 
     return arr;
 }
 
-// Approach: a linear scan records where every value lives. Since the
-// input is a permutation, position[value] gives the inverse permutation.
-function inversePermutation(arr) {
-    const n = arr.length;
-    const position = new Array(n + 1).fill(0);
-
-    for (let i = 0; i < n; i++) {
-        position[arr[i]] = i + 1;
+function linearSearch(arr, target) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === target) return i;
     }
 
-    const result = new Array(n);
+    return -1;
+}
 
-    for (let value = 1; value <= n; value++) {
-        result[value - 1] = position[value];
+function firstOccurrence(arr, target) {
+    return linearSearch(arr, target);
+}
+
+function lastOccurrence(arr, target) {
+    for (let i = arr.length - 1; i >= 0; i--) {
+        if (arr[i] === target) return i;
     }
 
-    return result;
+    return -1;
+}
+
+function countOccurrences(arr, target) {
+    let count = 0;
+
+    for (const value of arr) {
+        if (value === target) count++;
+    }
+
+    return count;
+}
+
+function findMinimum(arr) {
+    let minimum = Infinity;
+
+    for (const value of arr) {
+        minimum = Math.min(minimum, value);
+    }
+
+    return minimum;
+}
+
+function findMaximum(arr) {
+    let maximum = -Infinity;
+
+    for (const value of arr) {
+        maximum = Math.max(maximum, value);
+    }
+
+    return maximum;
 }
 
 function solve() {
     const n = Number(input[index++]);
+    const target = Number(input[index++]);
     const arr = inputArray(n);
 
-    return inversePermutation(arr).join(" ");
+    return `${firstOccurrence(arr, target)} ${lastOccurrence(arr, target)} ${countOccurrences(arr, target)}`;
 }
 
 for (let i = 0; i < t; i++) {

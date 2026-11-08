@@ -1,7 +1,7 @@
 // Topic: SORTING
-// Pattern: Greedy After Sorting
-// Use Cases: Minimize or maximize a value by consuming largest/smallest
-// elements first, pair problems, prefix-based greedy choices.
+// Pattern: Comparison Sorting (Bubble / Selection / Insertion)
+// Use Cases: Small arrays, nearly sorted data, stable ordering,
+// interview fundamentals, and greedy-after-sorting problems.
 //
 // Example Problem: Codeforces 160A - Twins
 // https://codeforces.com/problemset/problem/160/A
@@ -17,33 +17,84 @@ const t = Number(input[index++]);
 const outcomes = [];
 
 function inputArray(n) {
-    let arr = [];
+    const arr = [];
 
     for (let i = 0; i < n; i++) {
-        const a = Number(input[index++]);
-        arr.push(a);
+        arr.push(Number(input[index++]));
     }
 
     return arr;
 }
 
-// Approach: sort coins from largest to smallest. Taking larger coins
-// first reaches more than half of the total with the fewest coins.
+function bubbleSort(arr) {
+    const result = arr.slice();
+
+    for (let i = 0; i < result.length; i++) {
+        let swapped = false;
+
+        for (let j = 0; j + 1 < result.length - i; j++) {
+            if (result[j] > result[j + 1]) {
+                [result[j], result[j + 1]] = [result[j + 1], result[j]];
+                swapped = true;
+            }
+        }
+
+        if (!swapped) break;
+    }
+
+    return result;
+}
+
+function selectionSort(arr) {
+    const result = arr.slice();
+
+    for (let i = 0; i < result.length; i++) {
+        let minimum = i;
+
+        for (let j = i + 1; j < result.length; j++) {
+            if (result[j] < result[minimum]) minimum = j;
+        }
+
+        [result[i], result[minimum]] = [result[minimum], result[i]];
+    }
+
+    return result;
+}
+
+function insertionSort(arr) {
+    const result = arr.slice();
+
+    for (let i = 1; i < result.length; i++) {
+        const value = result[i];
+        let j = i - 1;
+
+        while (j >= 0 && result[j] > value) {
+            result[j + 1] = result[j];
+            j--;
+        }
+
+        result[j + 1] = value;
+    }
+
+    return result;
+}
+
+// Approach: sort the coins in ascending order, then take coins from the
+// largest end until the collected sum is strictly more than half.
 function minimumCoins(arr) {
     const total = arr.reduce((sum, value) => sum + value, 0);
-    arr.sort((a, b) => b - a);
-
+    const sorted = insertionSort(arr);
     let taken = 0;
 
-    for (let i = 0; i < arr.length; i++) {
-        taken += arr[i];
+    for (let i = sorted.length - 1; i >= 0; i--) {
+        taken += sorted[i];
 
         if (taken * 2 > total) {
-            return i + 1;
+            return sorted.length - i;
         }
     }
 
-    return arr.length;
+    return sorted.length;
 }
 
 function solve() {

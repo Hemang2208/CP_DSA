@@ -1,9 +1,9 @@
 // Topic: QUEUE
-// Pattern: FIFO Simulation
+// Pattern: Circular Array Queue / FIFO Simulation
 // Use Cases: BFS layers, scheduling, buffering, Josephus elimination,
-// level-order processing.
+// level-order processing, rolling windows.
 //
-// Example Problem: Josephus Problem (standard CP simulation)
+// Example Problem: Josephus Problem
 // Source: Classic queue simulation problem.
 //
 // node "Queue.js" < "Input.txt" > "Output.txt"
@@ -16,63 +16,82 @@ let index = 0;
 const t = Number(input[index++]);
 const outcomes = [];
 
-class Queue {
-    constructor() {
-        this.items = [];
+class CircularQueue {
+    constructor(capacity = 8) {
+        this.capacity = capacity;
+        this.items = new Array(capacity);
         this.head = 0;
+        this.tail = 0;
+        this.count = 0;
     }
 
-    push(val) {
-        this.items.push(val);
+    enqueue(value) {
+        if (this.count === this.capacity) this.resize();
+
+        this.items[this.tail] = value;
+        this.tail = (this.tail + 1) % this.capacity;
+        this.count++;
     }
 
-    pop() {
-        if (this.isEmpty()) {
-            return undefined;
-        }
+    dequeue() {
+        if (this.isEmpty()) return undefined;
 
-        const val = this.items[this.head];
-        this.head++;
+        const value = this.items[this.head];
+        this.head = (this.head + 1) % this.capacity;
+        this.count--;
 
-        if (this.head > 100000) {
-            this.items = this.items.slice(this.head);
-            this.head = 0;
-        }
-
-        return val;
+        return value;
     }
 
-    peek() {
+    front() {
         return this.items[this.head];
     }
 
+    rear() {
+        return this.items[(this.tail - 1 + this.capacity) % this.capacity];
+    }
+
     isEmpty() {
-        return this.head >= this.items.length;
+        return this.count === 0;
     }
 
     size() {
-        return this.items.length - this.head;
+        return this.count;
+    }
+
+    resize() {
+        const previous = this.items;
+        const previousCapacity = this.capacity;
+        this.capacity *= 2;
+        this.items = new Array(this.capacity);
+
+        for (let i = 0; i < this.count; i++) {
+            this.items[i] = previous[(this.head + i) % previousCapacity];
+        }
+
+        this.head = 0;
+        this.tail = this.count;
     }
 }
 
 // Approach: rotate the first k - 1 people to the back, then remove the
 // k-th person. The last remaining person is the survivor.
 function josephus(n, k) {
-    const queue = new Queue();
+    const queue = new CircularQueue();
 
     for (let person = 1; person <= n; person++) {
-        queue.push(person);
+        queue.enqueue(person);
     }
 
     while (queue.size() > 1) {
         for (let step = 0; step < k - 1; step++) {
-            queue.push(queue.pop());
+            queue.enqueue(queue.dequeue());
         }
 
-        queue.pop();
+        queue.dequeue();
     }
 
-    return queue.peek();
+    return queue.front();
 }
 
 function solve() {

@@ -5,6 +5,8 @@
 //
 // Example Problem: Longest Consecutive Sequence
 // Source: Classic hash set problem (LeetCode 128 / standard CP).
+//
+// node "HashSet.js" < "Input.txt" > "Output.txt"
 
 const fs = require("fs");
 
@@ -15,11 +17,10 @@ const t = Number(input[index++]);
 const outcomes = [];
 
 function inputArray(n) {
-    let arr = [];
+    const arr = [];
 
     for (let i = 0; i < n; i++) {
-        const a = Number(input[index++]);
-        arr.push(a);
+        arr.push(Number(input[index++]));
     }
 
     return arr;
@@ -28,10 +29,11 @@ function inputArray(n) {
 class HashSet {
     constructor(size = 10007) {
         this.size = size;
+        this.count = 0;
         this.buckets = Array.from({ length: size }, () => []);
     }
 
-    _hash(value) {
+    hash(value) {
         const text = String(value);
         let hash = 0;
 
@@ -43,27 +45,52 @@ class HashSet {
     }
 
     add(value) {
-        const bucket = this.buckets[this._hash(value)];
+        const bucket = this.buckets[this.hash(value)];
 
         for (const current of bucket) {
-            if (current === value) {
-                return;
-            }
+            if (current === value) return false;
         }
 
         bucket.push(value);
+        this.count++;
+        return true;
     }
 
     has(value) {
-        const bucket = this.buckets[this._hash(value)];
+        const bucket = this.buckets[this.hash(value)];
 
         for (const current of bucket) {
-            if (current === value) {
+            if (current === value) return true;
+        }
+
+        return false;
+    }
+
+    delete(value) {
+        const bucket = this.buckets[this.hash(value)];
+
+        for (let i = 0; i < bucket.length; i++) {
+            if (bucket[i] === value) {
+                bucket.splice(i, 1);
+                this.count--;
                 return true;
             }
         }
 
         return false;
+    }
+
+    values() {
+        return this.buckets.flat();
+    }
+
+    clear() {
+        this.buckets = Array.from({ length: this.size }, () => []);
+        this.count = 0;
+    }
+
+    isEmpty() {
+        return this.count === 0;
     }
 }
 
@@ -79,9 +106,7 @@ function longestConsecutive(arr) {
     let best = 0;
 
     for (const value of arr) {
-        if (set.has(value - 1)) {
-            continue;
-        }
+        if (set.has(value - 1)) continue;
 
         let current = value;
         let length = 1;
@@ -91,9 +116,7 @@ function longestConsecutive(arr) {
             length++;
         }
 
-        if (length > best) {
-            best = length;
-        }
+        best = Math.max(best, length);
     }
 
     return best;

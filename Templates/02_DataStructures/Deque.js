@@ -17,52 +17,53 @@ const t = Number(input[index++]);
 const outcomes = [];
 
 function inputArray(n) {
-    let arr = [];
+    const arr = [];
 
     for (let i = 0; i < n; i++) {
-        const a = Number(input[index++]);
-        arr.push(a);
+        arr.push(Number(input[index++]));
     }
 
     return arr;
 }
 
 class Deque {
-    constructor() {
-        this.items = [];
+    constructor(capacity = 8) {
+        this.capacity = capacity;
+        this.items = new Array(capacity);
         this.head = 0;
+        this.count = 0;
     }
 
-    pushBack(val) {
-        this.items.push(val);
+    pushBack(value) {
+        if (this.count === this.capacity) this.resize();
+
+        this.items[(this.head + this.count) % this.capacity] = value;
+        this.count++;
     }
 
     popBack() {
-        if (this.size() === 0) {
-            return undefined;
-        }
+        if (this.isEmpty()) return undefined;
 
-        return this.items.pop();
+        this.count--;
+        return this.items[(this.head + this.count) % this.capacity];
     }
 
-    pushFront(val) {
-        if (this.head > 0) {
-            this.head--;
-            this.items[this.head] = val;
-        } else {
-            this.items.unshift(val);
-        }
+    pushFront(value) {
+        if (this.count === this.capacity) this.resize();
+
+        this.head = (this.head - 1 + this.capacity) % this.capacity;
+        this.items[this.head] = value;
+        this.count++;
     }
 
     popFront() {
-        if (this.size() === 0) {
-            return undefined;
-        }
+        if (this.isEmpty()) return undefined;
 
-        const val = this.items[this.head];
-        this.head++;
+        const value = this.items[this.head];
+        this.head = (this.head + 1) % this.capacity;
+        this.count--;
 
-        return val;
+        return value;
     }
 
     front() {
@@ -70,11 +71,28 @@ class Deque {
     }
 
     back() {
-        return this.items[this.items.length - 1];
+        return this.items[(this.head + this.count - 1) % this.capacity];
+    }
+
+    isEmpty() {
+        return this.count === 0;
     }
 
     size() {
-        return this.items.length - this.head;
+        return this.count;
+    }
+
+    resize() {
+        const previous = this.items;
+        const previousCapacity = this.capacity;
+        this.capacity *= 2;
+        this.items = new Array(this.capacity);
+
+        for (let i = 0; i < this.count; i++) {
+            this.items[i] = previous[(this.head + i) % previousCapacity];
+        }
+
+        this.head = 0;
     }
 }
 
@@ -86,11 +104,11 @@ function slidingWindowMaximum(arr, k) {
     const result = [];
 
     for (let i = 0; i < arr.length; i++) {
-        while (deque.size() && deque.front() <= i - k) {
+        while (!deque.isEmpty() && deque.front() <= i - k) {
             deque.popFront();
         }
 
-        while (deque.size() && arr[deque.back()] <= arr[i]) {
+        while (!deque.isEmpty() && arr[deque.back()] <= arr[i]) {
             deque.popBack();
         }
 

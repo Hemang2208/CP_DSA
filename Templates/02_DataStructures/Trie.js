@@ -1,10 +1,12 @@
 // Topic: TRIE
 // Pattern: Prefix Tree
 // Use Cases: Prefix counting, autocomplete, word search, maximum XOR,
-// dictionary matching, Aho-Corasick preprocessing.
+// dictionary matching, delete word operations.
 //
 // Example Problem: Count Words With a Given Prefix
 // Source: Standard trie problem.
+//
+// node "Trie.js" < "Input.txt" > "Output.txt"
 
 const fs = require("fs");
 
@@ -34,30 +36,85 @@ class Trie {
     insert(word) {
         let node = this.root;
 
-        for (const char of word) {
-            if (!node.children.has(char)) {
-                node.children.set(char, new TrieNode());
+        for (const ch of word) {
+            if (!node.children.has(ch)) {
+                node.children.set(ch, new TrieNode());
             }
 
-            node = node.children.get(char);
+            node = node.children.get(ch);
             node.prefixCount++;
         }
 
         node.wordCount++;
     }
 
+    search(word) {
+        let node = this.root;
+
+        for (const ch of word) {
+            if (!node.children.has(ch)) return false;
+            node = node.children.get(ch);
+        }
+
+        return node.wordCount > 0;
+    }
+
+    startsWith(prefix) {
+        let node = this.root;
+
+        for (const ch of prefix) {
+            if (!node.children.has(ch)) return false;
+            node = node.children.get(ch);
+        }
+
+        return true;
+    }
+
     countPrefix(prefix) {
         let node = this.root;
 
-        for (const char of prefix) {
-            if (!node.children.has(char)) {
-                return 0;
-            }
-
-            node = node.children.get(char);
+        for (const ch of prefix) {
+            if (!node.children.has(ch)) return 0;
+            node = node.children.get(ch);
         }
 
         return node.prefixCount;
+    }
+
+    delete(word) {
+        const path = [];
+        let node = this.root;
+
+        for (const ch of word) {
+            if (!node.children.has(ch)) return false;
+            path.push([node, ch]);
+            node = node.children.get(ch);
+        }
+
+        if (node.wordCount === 0) return false;
+
+        if (node.wordCount > 1) {
+            node.wordCount--;
+
+            for (const [parent, ch] of path) {
+                parent.children.get(ch).prefixCount--;
+            }
+
+            return true;
+        }
+
+        node.wordCount = 0;
+
+        for (const [parent, ch] of path) {
+            const child = parent.children.get(ch);
+            child.prefixCount--;
+
+            if (child.prefixCount === 0) {
+                parent.children.delete(ch);
+            }
+        }
+
+        return true;
     }
 }
 

@@ -1,7 +1,7 @@
 // Topic: BINARY SEARCH
-// Pattern: Binary Search on Sorted Array (Upper Bound)
-// Use Cases: Counting elements <= x, lower/upper bound, first or last
-// occurrence, search in rotated arrays, binary search on the answer.
+// Pattern: Binary Search on a Sorted Array
+// Use Cases: Exact lookup, lower/upper bound, first or last occurrence,
+// occurrence counting, and binary search on the answer.
 //
 // Example Problem: Codeforces 706B - Interesting drink
 // https://codeforces.com/problemset/problem/706/B
@@ -17,36 +17,65 @@ const t = Number(input[index++]);
 const outcomes = [];
 
 function inputArray(n) {
-    let arr = [];
+    const arr = [];
 
     for (let i = 0; i < n; i++) {
-        const a = Number(input[index++]);
-        arr.push(a);
+        arr.push(Number(input[index++]));
     }
 
     return arr;
 }
 
+function binarySearch(arr, target) {
+    let left = 0;
+    let right = arr.length - 1;
+
+    while (left <= right) {
+        const middle = (left + right) >> 1;
+
+        if (arr[middle] === target) return middle;
+        if (arr[middle] < target) left = middle + 1;
+        else right = middle - 1;
+    }
+
+    return -1;
+}
+
+function lowerBound(arr, target) {
+    let left = 0;
+    let right = arr.length;
+
+    while (left < right) {
+        const middle = (left + right) >> 1;
+
+        if (arr[middle] >= target) right = middle;
+        else left = middle + 1;
+    }
+
+    return left;
+}
+
+function upperBound(arr, target) {
+    let left = 0;
+    let right = arr.length;
+
+    while (left < right) {
+        const middle = (left + right) >> 1;
+
+        if (arr[middle] > target) right = middle;
+        else left = middle + 1;
+    }
+
+    return left;
+}
+
+function countOccurrences(arr, target) {
+    return upperBound(arr, target) - lowerBound(arr, target);
+}
+
 // Approach: sort the prices. upperBound returns the first index whose
 // value is greater than x; that index is exactly how many prices are
 // affordable with x coins.
-function upperBound(arr, target) {
-    let low = 0;
-    let high = arr.length;
-
-    while (low < high) {
-        const mid = (low + high) >> 1;
-
-        if (arr[mid] <= target) {
-            low = mid + 1;
-        } else {
-            high = mid;
-        }
-    }
-
-    return low;
-}
-
 function solve() {
     const n = Number(input[index++]);
     const prices = inputArray(n);

@@ -53,7 +53,7 @@ function distinctQueries(arr, queries, n) {
             return blockA - blockB;
         }
 
-        return blockA % 2 === 0 ? (a.right - b.right) : (b.right - a.right);
+        return blockA % 2 === 0 ? a.right - b.right : b.right - a.right;
     });
 
     const frequency = new Array(values.length).fill(0);

@@ -5,6 +5,8 @@
 //
 // Example Problem: Two Sum
 // Source: Classic hash map problem (LeetCode 1 / standard CP).
+//
+// node "HashMap.js" < "Input.txt" > "Output.txt"
 
 const fs = require("fs");
 
@@ -15,11 +17,10 @@ const t = Number(input[index++]);
 const outcomes = [];
 
 function inputArray(n) {
-    let arr = [];
+    const arr = [];
 
     for (let i = 0; i < n; i++) {
-        const a = Number(input[index++]);
-        arr.push(a);
+        arr.push(Number(input[index++]));
     }
 
     return arr;
@@ -28,22 +29,23 @@ function inputArray(n) {
 class HashMap {
     constructor(size = 10007) {
         this.size = size;
+        this.count = 0;
         this.buckets = Array.from({ length: size }, () => []);
     }
 
-    _hash(key) {
+    hash(key) {
         const text = String(key);
-        let hash = 0;
+        let value = 0;
 
         for (let i = 0; i < text.length; i++) {
-            hash = (hash * 31 + text.charCodeAt(i)) % this.size;
+            value = (value * 31 + text.charCodeAt(i)) % this.size;
         }
 
-        return hash;
+        return value;
     }
 
     set(key, value) {
-        const bucket = this.buckets[this._hash(key)];
+        const bucket = this.buckets[this.hash(key)];
 
         for (const pair of bucket) {
             if (pair[0] === key) {
@@ -53,22 +55,62 @@ class HashMap {
         }
 
         bucket.push([key, value]);
+        this.count++;
     }
 
     get(key) {
-        const bucket = this.buckets[this._hash(key)];
+        const bucket = this.buckets[this.hash(key)];
 
         for (const pair of bucket) {
-            if (pair[0] === key) {
-                return pair[1];
-            }
+            if (pair[0] === key) return pair[1];
         }
 
         return undefined;
     }
 
     has(key) {
-        return this.get(key) !== undefined;
+        const bucket = this.buckets[this.hash(key)];
+
+        for (const pair of bucket) {
+            if (pair[0] === key) return true;
+        }
+
+        return false;
+    }
+
+    delete(key) {
+        const bucket = this.buckets[this.hash(key)];
+
+        for (let i = 0; i < bucket.length; i++) {
+            if (bucket[i][0] === key) {
+                bucket.splice(i, 1);
+                this.count--;
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    keys() {
+        return this.buckets.flatMap((bucket) => bucket.map((pair) => pair[0]));
+    }
+
+    values() {
+        return this.buckets.flatMap((bucket) => bucket.map((pair) => pair[1]));
+    }
+
+    entries() {
+        return this.buckets.flatMap((bucket) => bucket.map((pair) => pair.slice()));
+    }
+
+    clear() {
+        this.buckets = Array.from({ length: this.size }, () => []);
+        this.count = 0;
+    }
+
+    isEmpty() {
+        return this.count === 0;
     }
 }
 
@@ -81,7 +123,7 @@ function twoSum(arr, target) {
         const need = target - arr[i];
 
         if (map.has(need)) {
-            return [map.get(need) + 1, i + 1].join(" ");
+            return `${map.get(need) + 1} ${i + 1}`;
         }
 
         map.set(arr[i], i);
