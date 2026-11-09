@@ -12,7 +12,7 @@ const outcomes = [];
 function inputArray(n) {
 	let arr = [];
 	
-	for (let i = 0; i < n; i++) {
+	for (let i = 0 ; i < n ; i++) {
 		const a = Number(input[index++]);
 		arr.push(a);
 	}
